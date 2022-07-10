@@ -10,6 +10,11 @@ import Container from '@mui/material/Container';
 import MaterialLink from '@mui/material/Link';
 import { Link } from 'react-router-dom';
 import GlobalStyles from '@mui/material/GlobalStyles';
+import styled from '@emotion/styled';
+
+const Test = styled.div`
+  color: green;
+`
 
 function Copyright() {
   return (
@@ -68,6 +73,7 @@ export default function Album() {
   return (
     <React.Fragment>
       <GlobalStyles styles={(theme) => classes(theme)} />
+      <Test>Test test There</Test>
       <main>
         {/* Hero unit */}
         <div className="heroContent">

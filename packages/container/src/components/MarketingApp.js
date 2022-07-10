@@ -1,5 +1,10 @@
 import { mount } from 'marketing/MarketingApp';
 import { useEffect, useRef } from 'react';
+import styled from '@emotion/styled';
+
+const Test = styled.div`
+  color: red;
+`
 
 const MarketingApp = () => {
   const ref = useRef(null);
@@ -10,7 +15,7 @@ const MarketingApp = () => {
 
   return (
     <>
-      <h1>Test test There</h1>
+      <Test>Test test There</Test>
       <div ref={ref} />
     </>
   )
