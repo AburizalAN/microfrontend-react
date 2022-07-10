@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import MaterialLink from '@mui/material/Link';
 import { Link } from 'react-router-dom';
-import GlobalStyles from '@mui/material/GlobalStyles'
+import GlobalStyles from '@mui/material/GlobalStyles';
 
 function Copyright() {
   return (

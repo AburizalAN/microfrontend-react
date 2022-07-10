@@ -1,18 +1,13 @@
-import { mount } from 'marketing/MarketingApp';
-import { useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MarketingApp from './components/MarketingApp';
+import Header from './components/Header';
 
 const App = () => {
-  const ref = useRef(null);
-
-  useEffect(() => {
-    mount(ref.current)
-  }, [])
-
   return (
-    <>
-      <h1>Test test There</h1>
-      <div ref={ref} />
-    </>
+    <Router>
+      <Header />
+      <MarketingApp />
+    </Router>
   )
 }
 
