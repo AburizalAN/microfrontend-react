@@ -1,14 +1,9 @@
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import { useEffect, useRef } from 'react';
-import styled from '@emotion/styled';
 import { useHistory } from 'react-router-dom';
 
-const Test = styled.div`
-  color: red;
-`
-
-const MarketingApp = () => {
-  const ref = useRef(null);
+const AuthApp = () => {
+  const ref = useRef();
   const history = useHistory();
 
   useEffect(() => {
@@ -21,14 +16,12 @@ const MarketingApp = () => {
       }
     })
 
-    history.listen(onParentNavigate);
+    history.listen(onParentNavigate)
   }, [])
 
   return (
-    <>
-      <div ref={ref} />
-    </>
+    <div ref={ref} />
   )
 }
 
-export default MarketingApp;
+export default AuthApp;

@@ -7,6 +7,9 @@ const path = require("path");
 
 const devConfig = {
   mode: 'development',
+  output: {
+    publicPath: 'http://localhost:8081/',
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, 'public')
