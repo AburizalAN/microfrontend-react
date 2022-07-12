@@ -4,7 +4,7 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 import { UNSAFE_NavigationContext } from "react-router-dom";
 import App from './App';
 
-const mount = (el, { onNavigate, defaultHistory, initialPath } = { onNavigate: null, defaultHistory: null }) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath, onSignIn } = { onNavigate: null, defaultHistory: null }) => {
   const history = defaultHistory || createMemoryHistory({
     initialEntries: [initialPath],
   });
@@ -14,7 +14,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath } = { onNavigate: n
   }
 
   const root = ReactDOM.createRoot(el);
-  root.render(<App history={history} onNavigate={onNavigate} />);
+  root.render(<App history={history} onSignIn={onSignIn} />);
 
   return {
     onParentNavigate({ pathname: nextPathname }) {
