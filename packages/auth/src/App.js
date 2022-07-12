@@ -1,5 +1,4 @@
 import { Router, Switch, Route } from 'react-router-dom';
-import { useEffect, useContext } from 'react';
 
 import SignIn from './components/Signin';
 import SignUp from './components/Signup';
