@@ -1,16 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
+import { useEffect, useContext } from 'react';
 
 import Landing from './components/Landing';
 import Pricing from './components/Pricing';
 
-export default () => {
+export default ({ history}) => {
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path="/pricing" element={<Pricing />}/>
-          <Route path="/" element={<Landing />}/>
-        </Routes>
+      <Router history={history}>
+        <Switch>
+          <Route path="/pricing" component={Pricing} />
+          <Route path="/" component={Landing} />
+        </Switch>
       </Router>
     </div>
   )
